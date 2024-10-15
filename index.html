@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the UN's Sustainable Development Goals (SDGs) and take action for a better future.">
+    <title>Sustainable Development Goals</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, #1e90ff, #00c853);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Navigation Styling */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem;
+            margin: 3rem auto;
+            max-width: 1200px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        section:nth-child(even) {
+            background: #f0f8ff;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #1e90ff;
+            margin-bottom: 1.5rem;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .learn-more-btn {
+            padding: 12px 25px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .learn-more-btn::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+            border-radius: 50%;
+        }
+
+        .learn-more-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .learn-more-btn:hover {
+            background-color: #007acc;
+        }
+
+        .hidden-content {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            border-left: 5px solid #1e90ff;
+            display: none;
+            transition: max-height 0.5s ease;
+            overflow: hidden;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(90deg, #1e90ff, #00c853);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>UN Sustainable Development Goals</h1>
+        <p>Take action for a better world by learning about the SDGs.</p>
+        <nav>
+            <ul>
+                <li><a href="#goal1">Goal 1: No Poverty</a></li>
+                <li><a href="#goal13">Goal 13: Climate Action</a></li>
+                <li><a href="#goal15">Goal 15: Life on Land</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Goal 1: No Poverty -->
+    <section id="goal1">
+        <h2>Goal 1: No Poverty</h2>
+        <p>End poverty in all its forms everywhere by 2030. This goal calls for a renewed focus on equity and opportunity for all, particularly for the most vulnerable populations.</p>
+        <button class="learn-more-btn" onclick="toggleContent('extraInfo1')">Learn More</button>
+        <div class="hidden-content" id="extraInfo1">
+            <p>Poverty is not only about income. It encompasses many dimensions, including hunger, malnutrition, limited access to education, and social discrimination.</p>
+        </div>
+    </section>
+
+    <!-- Goal 13: Climate Action -->
+    <section id="goal13">
+        <h2>Goal 13: Climate Action</h2>
+        <p>Take urgent action to combat climate change and its impacts. Climate change is affecting every country on every continent, disrupting national economies and lives.</p>
+        <button class="learn-more-btn" onclick="toggleContent('extraInfo13')">Learn More</button>
+        <div class="hidden-content" id="extraInfo13">
+            <p>From rising sea levels to more frequent extreme weather events, the impacts of climate change are visible and significant, requiring bold global action.</p>
+        </div>
+    </section>
+
+    <!-- Goal 15: Life on Land -->
+    <section id="goal15">
+        <h2>Goal 15: Life on Land</h2>
+        <p>Protect, restore, and promote the sustainable use of terrestrial ecosystems, halt and reverse land degradation, and halt biodiversity loss.</p>
+        <button class="learn-more-btn" onclick="toggleContent('extraInfo15')">Learn More</button>
+        <div class="hidden-content" id="extraInfo15">
+            <p>Forests are home to more than 80% of all terrestrial species of animals, plants, and fungi. Their protection is essential for the survival of these ecosystems.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Sustainable Development Goals | Empowering Change for a Better Future</p>
+    </footer>
+
+    <script>
+        // JavaScript function to toggle visibility of content
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // Scroll-based section animations
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            const triggerBottom = window.innerHeight / 5 * 4;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
